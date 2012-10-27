@@ -1,0 +1,7 @@
+# Resource locations to be added to the default path
+[General]
+FileSystem=./
+FileSystem=OtherMeshes/
+FileSystem=Saxon/
+FileSystem=Argus/
+FileSystem=media/

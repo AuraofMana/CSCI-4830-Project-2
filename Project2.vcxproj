@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1FC88E23-177D-4E54-9EF5-9819F4B11D56}</ProjectGuid>
+    <RootNamespace>Project2</RootNamespace>
+    <SccProjectName>Svn</SccProjectName>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(Boost);$(OISInc);$(OpenALInc);$(OgreInclude);$(BULLETSRC);$(IncludePath)</IncludePath>
+    <LibraryPath>$(OpenALLib);$(OgreLibDebug);$(Boost)lib;C:\BulletPhysics\binaries\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(Boost);$(OISInc);$(OpenALInc);$(OgreInclude);$(BULLETSRC);$(IncludePath)</IncludePath>
+    <LibraryPath>$(OpenALLib);$(OgreLibRelease);$(Boost)lib;C:\BulletPhysics\binaries\lib\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\boost_1_42;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\include\OIS;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\include\OGRE;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\bullet-2.77\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;winmm.lib;OpenAL32.lib;alut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\boost_1_42\lib;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\lib\debug;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\BulletBuild\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>C:\Users\Jeremy\Documents\Project2\Project2;C:\Users\Jeremy\Documents\OpenAL 1.1 SDK\freealut-1.1.0-src\include\AL;C:\Users\Jeremy\Documents\OpenAL 1.1 SDK\include;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\boost_1_42;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\include\OIS;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\include\OGRE;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\bullet-2.77\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OgreMain.lib;OIS.lib;winmm.lib;OpenAL32.lib;alut.lib;BulletCollision.lib;BulletDynamics.lib;LinearMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Jeremy\Documents\OpenAL 1.1 SDK\libs\Win32;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\BulletBuild\lib\Release;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\boost_1_42\lib;C:\Users\Jeremy\Documents\Project 1\VR\Project1\trunk\OgreSDK_vc10_v1-7-2\lib\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AnimationManager.cpp" />
+    <ClCompile Include="BtOgre.cpp" />
+    <ClCompile Include="ConvexDecomposition\bestfit.cpp" />
+    <ClCompile Include="ConvexDecomposition\bestfitobb.cpp" />
+    <ClCompile Include="ConvexDecomposition\cd_hull.cpp" />
+    <ClCompile Include="ConvexDecomposition\cd_wavefront.cpp" />
+    <ClCompile Include="ConvexDecomposition\concavity.cpp" />
+    <ClCompile Include="ConvexDecomposition\ConvexBuilder.cpp" />
+    <ClCompile Include="ConvexDecomposition\ConvexDecomposition.cpp" />
+    <ClCompile Include="ConvexDecomposition\fitsphere.cpp" />
+    <ClCompile Include="ConvexDecomposition\float_math.cpp" />
+    <ClCompile Include="ConvexDecomposition\meshvolume.cpp" />
+    <ClCompile Include="ConvexDecomposition\planetri.cpp" />
+    <ClCompile Include="ConvexDecomposition\raytri.cpp" />
+    <ClCompile Include="ConvexDecomposition\splitplane.cpp" />
+    <ClCompile Include="ConvexDecomposition\vlookup.cpp" />
+    <ClCompile Include="GameTimer.cpp" />
+    <ClCompile Include="GraphicsInterface.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OpenALSoundSystem.cpp" />
+    <ClCompile Include="PhysicsInterface.cpp" />
+    <ClCompile Include="tinybind.cpp" />
+    <ClCompile Include="tinystr.cpp" />
+    <ClCompile Include="tinyxml.cpp" />
+    <ClCompile Include="tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxmlparser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimationManager.h" />
+    <ClInclude Include="BtOgreExtras.h" />
+    <ClInclude Include="BtOgreGP.h" />
+    <ClInclude Include="BtOgrePG.h" />
+    <ClInclude Include="ConvexDecomposition\bestfit.h" />
+    <ClInclude Include="ConvexDecomposition\bestfitobb.h" />
+    <ClInclude Include="ConvexDecomposition\cd_hull.h" />
+    <ClInclude Include="ConvexDecomposition\cd_vector.h" />
+    <ClInclude Include="ConvexDecomposition\cd_wavefront.h" />
+    <ClInclude Include="ConvexDecomposition\concavity.h" />
+    <ClInclude Include="ConvexDecomposition\ConvexBuilder.h" />
+    <ClInclude Include="ConvexDecomposition\ConvexDecomposition.h" />
+    <ClInclude Include="ConvexDecomposition\fitsphere.h" />
+    <ClInclude Include="ConvexDecomposition\float_math.h" />
+    <ClInclude Include="ConvexDecomposition\meshvolume.h" />
+    <ClInclude Include="ConvexDecomposition\planetri.h" />
+    <ClInclude Include="ConvexDecomposition\raytri.h" />
+    <ClInclude Include="ConvexDecomposition\splitplane.h" />
+    <ClInclude Include="ConvexDecomposition\vlookup.h" />
+    <ClInclude Include="GameTimer.h" />
+    <ClInclude Include="GraphicsInterface.h" />
+    <ClInclude Include="OpenALSoundSystem.h" />
+    <ClInclude Include="PhysicsInterface.h" />
+    <ClInclude Include="tinybind.h" />
+    <ClInclude Include="tinystr.h" />
+    <ClInclude Include="tinyxml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Bullet-2.77\VS2010\src\BulletCollision\BulletCollision.vcxproj">
+      <Project>{232a7de5-a73f-4ba1-bb0c-99fbb4f7c46f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:\Bullet-2.77\VS2010\src\BulletDynamics\BulletDynamics.vcxproj">
+      <Project>{891eb3d3-610a-436b-85a6-b1612ea0389c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:\Bullet-2.77\VS2010\src\LinearMath\LinearMath.vcxproj">
+      <Project>{1b7caf41-43d1-433e-8d27-525f1006c17d}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Materials.material" />
+    <None Include="plugins.cfg" />
+    <None Include="plugins_release.cfg" />
+    <None Include="resources.cfg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,53 @@
+
+particle_system ForceField
+{
+	quota	2000
+	material	PE/point_lensflare
+	particle_width	18
+	particle_height	18
+	cull_each	false
+	renderer	billboard
+	sorted	false
+	local_space	false
+	iteration_interval	0
+	nonvisible_update_timeout	0
+	billboard_type	point
+	billboard_origin	center
+	billboard_rotation_type	texcoord
+	common_up_vector	0 1 0
+	point_rendering	false
+	accurate_facing	false
+
+	emitter Box
+	{
+		angle	0
+		colour	1 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 1
+		direction	1 0 0
+		emission_rate	50
+		position	0 0 0
+		velocity	30
+		velocity_min	30
+		velocity_max	30
+		time_to_live	10
+		time_to_live_min	10
+		time_to_live_max	10
+		duration	0
+		duration_min	0
+		duration_max	0
+		repeat_delay	0
+		repeat_delay_min	0
+		repeat_delay_max	0
+		width	80
+		height	1
+		depth	1
+	}
+
+	affector DeflectorPlane
+	{
+		plane_point	25 0 0
+		plane_normal	0 0 1
+		bounce	0.1
+	}
+}

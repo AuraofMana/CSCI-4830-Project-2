@@ -1,0 +1,140 @@
+
+particle_system Tutorial
+{
+	quota	2000
+	material	PE/point_lensflare
+	particle_width	3
+	particle_height	3
+	cull_each	false
+	renderer	billboard
+	sorted	false
+	local_space	false
+	iteration_interval	0
+	nonvisible_update_timeout	0
+	billboard_type	point
+	billboard_origin	center
+	billboard_rotation_type	texcoord
+	common_up_vector	0 1 0
+	point_rendering	false
+	accurate_facing	false
+
+	emitter Ring
+	{
+		angle	0
+		colour	1 0.4 1 1
+		colour_range_start	1 0.4 1 1
+		colour_range_end	1 0.4 1 1
+		direction	0 1 0
+		emission_rate	200
+		position	0 -20 0
+		velocity	0.1
+		velocity_min	0.1
+		velocity_max	0.1
+		time_to_live	3
+		time_to_live_min	3
+		time_to_live_max	3
+		duration	0
+		duration_min	0
+		duration_max	0
+		repeat_delay	0
+		repeat_delay_min	0
+		repeat_delay_max	0
+		width	60
+		height	60
+		depth	2
+		inner_width	0.9
+		inner_height	0.9
+	}
+
+	emitter Point
+	{
+		angle	4
+		colour	0.23 0.54 0.35 1
+		colour_range_start	0.23 0.54 0.35 1
+		colour_range_end	0.23 0.54 0.35 1
+		direction	0 -1 0
+		emission_rate	80
+		position	0 20 0
+		velocity	10
+		velocity_min	10
+		velocity_max	20
+		time_to_live	1.5
+		time_to_live_min	1.5
+		time_to_live_max	2.5
+		duration	0
+		duration_min	0
+		duration_max	0
+		repeat_delay	0
+		repeat_delay_min	0
+		repeat_delay_max	0
+	}
+
+	emitter Point
+	{
+		angle	0
+		colour	0.96 0.63 0.77 1
+		colour_range_start	0.96 0.63 0.77 1
+		colour_range_end	0.39 0.39 0.84 1
+		direction	0.6 0.8 0
+		emission_rate	20
+		position	-30 -20 0
+		velocity	40
+		velocity_min	40
+		velocity_max	40
+		time_to_live	1.2
+		time_to_live_min	1.2
+		time_to_live_max	1.2
+		duration	4
+		duration_min	4
+		duration_max	4
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+	}
+
+	emitter Point
+	{
+		angle	0
+		colour	0.96 0.63 0.77 1
+		colour_range_start	0.96 0.63 0.77 1
+		colour_range_end	0.39 0.39 0.84 1
+		direction	-0.6 0.8 0
+		emission_rate	20
+		position	30 -20 0
+		velocity	40
+		velocity_min	40
+		velocity_max	40
+		time_to_live	1.2
+		time_to_live_min	1.2
+		time_to_live_max	1.2
+		duration	4
+		duration_min	4
+		duration_max	4
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+	}
+
+	emitter Point
+	{
+		angle	10
+		colour	1 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 1
+		direction	0 1 0
+		emission_rate	10
+		position	0 20 0
+		velocity	40
+		velocity_min	40
+		velocity_max	50
+		time_to_live	3
+		time_to_live_min	3
+		time_to_live_max	3
+		duration	4
+		duration_min	4
+		duration_max	6
+		repeat_delay	0.5
+		repeat_delay_min	0.5
+		repeat_delay_max	1.5
+	}
+}
